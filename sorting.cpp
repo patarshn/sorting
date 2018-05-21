@@ -1,13 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void selection(int x){
- 
- cout<<endl;
- int a[x];
- for(int i=0;i<x;i++){
-  cin>>a[i];
- }
+void selection(int a[],int x){
+
  for(int i=0;i<x;i++){
  for(int j=i+1;j<x;j++){
   if(a[i]>a[j]){
@@ -17,10 +12,7 @@ void selection(int x){
  }
  }
  }
- cout<<endl;
- for(int i=0;i<x;i++){
- cout<<a[i]<<" ";
- }
+
 }
 void bubble(int x){
 	cout<<endl;
@@ -48,7 +40,8 @@ void bubble(int x){
 int main(){
 int n;
 cin>>n;
-selection(n);
+selection(a,n);
+tampil(a,n);
 bubble(n);
 	
 return 0;
