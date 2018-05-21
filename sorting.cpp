@@ -14,26 +14,19 @@ void selection(int a[],int x){
  }
 
 }
-void bubble(int x){
-	cout<<endl;
-	int a[x];
+
+void bubble(int a[],int x){
+
 	for(int i=0;i<x;i++){
-	cin>>a[i];	
-	}
-	
-	for(int i=0;i<x;i++){
-	for(int j=i;j<x;j++){
-		if(a[i]>a[j+1]){
-		int ptr=a[i];
-		a[i]=a[j+1];
+	for(int j=0;j<x-1;j++){
+		if(a[j]>a[j+1]){
+		int ptr=a[j];
+		a[j]=a[j+1];
 		a[j+1]=ptr;
 		}
 	}
 	}
-	cout<<endl;
-	for(int i=0;i<x;i++){
-	cout<<a[i]<<" ";	
-	}
+
 }
 
 
@@ -42,7 +35,8 @@ int n;
 cin>>n;
 selection(a,n);
 tampil(a,n);
-bubble(n);
+bubble(a,n);
+tampil(a,n);
 	
 return 0;
 }
